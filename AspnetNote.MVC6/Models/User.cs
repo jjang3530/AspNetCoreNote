@@ -10,7 +10,7 @@ namespace AspnetNote.MVC6.Models
         [Key] //PK setup
         public int UserNo { get; set; }
 
-        [Required] //Not Null
+        [Required(ErrorMessage = "Please input user name")] //Not Null
         public string UserName { get; set; }
 
         [Required] //Not Null
