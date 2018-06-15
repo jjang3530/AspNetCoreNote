@@ -1,4 +1,5 @@
 ﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+@using Microsoft.AspNetCore.Http;
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,8 +36,16 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Account" asp-action="Register">SIGNIN</a></li>
-                    <li><a asp-area="" asp-controller="Account" asp-action="Login">LOGIN</a></li>
+                    @if (Context.Session.GetInt32("USER_LOGIN_KEY") == null)
+                    {
+                        <li><a asp-area="" asp-controller="Account" asp-action="Register">SIGNIN</a></li>
+                        <li><a asp-area="" asp-controller="Account" asp-action="Login">LOGIN</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-area="" asp-controller="Account" asp-action="Logout">LOGOUT</a></li>
+                    }
+
                 </ul>
 
             </div>

@@ -29,6 +29,15 @@ namespace AspnetNote.MVC6
         {
             // Add framework services.
             services.AddMvc();
+
+            //DI - middleware
+
+            //Session -service register
+            services.AddSession();
+
+            //Identity
+
+            //Web API relate functions
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +57,8 @@ namespace AspnetNote.MVC6
             }
 
             app.UseStaticFiles();
-
+            //Using in Application 
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
