@@ -10775,11 +10775,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jay\\Desktop\\AspnetNote\\AspnetNote.MVC6\\AspnetNote.MVC6.csproj",
+      "projectUniqueName": "C:\\Users\\Jay\\AspnetNote\\AspnetNote.MVC6\\AspnetNote.MVC6.csproj",
       "projectName": "AspnetNote.MVC6",
-      "projectPath": "C:\\Users\\Jay\\Desktop\\AspnetNote\\AspnetNote.MVC6\\AspnetNote.MVC6.csproj",
+      "projectPath": "C:\\Users\\Jay\\AspnetNote\\AspnetNote.MVC6\\AspnetNote.MVC6.csproj",
       "packagesPath": "C:\\Users\\Jay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jay\\Desktop\\AspnetNote\\AspnetNote.MVC6\\obj\\",
+      "outputPath": "C:\\Users\\Jay\\AspnetNote\\AspnetNote.MVC6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jay\\AppData\\Roaming\\NuGet\\NuGet.Config",

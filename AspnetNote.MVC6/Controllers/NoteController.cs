@@ -28,9 +28,25 @@ namespace AspnetNote.MVC6.Controllers
                 var list = db.Notes.ToList(); // Will bring all list
                 return View(list);
             }
-
-            
         }
+
+        public IActionResult Detail(int noteNo)
+        {
+            if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
+            {
+                // Login Status
+                return RedirectToAction("Login", "Account");
+            }
+
+            using (var db = new AspnetNoteDbContext())
+            {
+                var note = db.Notes.FirstOrDefault(n => n.NoteNo.Equals(noteNo));
+                return View(note);
+            }
+
+
+        }
+
 
         public IActionResult Add()
         {
